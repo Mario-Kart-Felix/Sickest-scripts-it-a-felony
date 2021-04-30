@@ -1,0 +1,55 @@
+About Codespaces
+Codespaces is an online development environment, hosted by GitHub and powered by Visual Studio Code, that allows you to develop entirely in the cloud.
+
+Codespaces is available for user accounts using GitHub Free or GitHub Pro. For more information, see "GitHub's products."
+
+In this article
+About Codespaces
+Using Codespaces
+About billing for Codespaces
+Joining the beta
+Contacting us about Codespaces
+Note: Codespaces is currently in limited public beta and subject to change. During the beta period, GitHub does not make any guarantees about the availability of Codespaces. For more information about joining the beta, see "Joining the beta."
+
+About Codespaces
+Codespaces is a cloud development environment available in your browser. A codespace includes everything you need to develop for a specific repository, including a text editor with syntax highlighting and autocomplete, a terminal, debugging tools, and Git commands, all within GitHub. You can also install Visual Studio Code extensions in your codespace to add more functionality.
+
+Codespaces makes it easier for developers to onboard to a new company or start contributing to an open-source project. Project maintainers can configure a repository so that, when you create a codespace for the repository, the project's dependencies are included automatically. You can start coding faster by reducing time spent configuring your environment.
+
+Codespaces allows you to develop in the cloud instead of locally. Developers can contribute from anywhere, on any machine, including tablets or Chromebooks, and there is no need to maintain local copies of intellectual property.
+
+An open codespace
+
+Using Codespaces
+Each developer can create one or more codespace for any public repository, or for any private repository owned by their user account. During the beta, private repositories owned by organizations or any repositories owned by an organization that requires SAML single sign-on are not supported. Each codespace you create is only available to you. No one else can work in your codespace.
+
+Each codespace is associated with a specific branch of a repository. You can create more than one codespace per repository or even per branch. However, each user account has a two-codespace limit during limited public beta. If you've reached the limit and want to create a new codespace, you must delete a codespace first. For more information, see "Deleting a codespace."
+
+You can edit code, debug, and use Git commands while developing in a codespace with Visual Studio Code. For more information, see the Visual Studio Code documentation.
+
+You can connect to your codespace directly from Visual Studio Code. For more information, see "Using Codespaces in Visual Studio Code."
+
+You can create a default codespace configuration for your repository that determines the environment of every new codespace anyone creates for that repository. The configuration defines a development container that can include frameworks, tools, extensions, and port forwarding. For more information, see "Configuring Codespaces for your project."
+
+You can also personalize aspects of the codespace environment for any codespace that your account creates. Personalization can include shell preferences and additional tools. For more information, see "Personalizing Codespaces for your account."
+
+You can configure settings to add encrypted secrets, enable GPG verification, and allow codespaces to access other repositories. For more information, see "Managing encrypted secrets for Codespaces", "Managing GPG verification for Codespaces", and "Managing access and security for Codespaces."
+
+You can see every codespace owned by your user account at github.com/codespaces.
+
+During the beta, functionality is limited.
+
+For the best experience with Codespaces, we recommend using a Chromium-based browser, like Google Chrome or Microsoft Edge.
+Only a single size of codespace is available.
+Only Linux containers are supported.
+A codespace is not fully resumable. Processes that were running at the time the codespace was stopped will not be restarted.
+About billing for Codespaces
+Codespaces is free to use during the beta. When Codespaces becomes generally available, you will be billed for storage and compute usage. For more information, see "About billing for Codespaces."
+
+Joining the beta
+A limited number of people will be invited to join the beta. To join the waitlist, see Sign up for Codespaces beta.
+
+Contacting us about Codespaces
+If you encounter problems using Codespaces, see "Troubleshooting your codespace."
+
+If you still need help or have feedback about Codespaces, use the Codespaces Feedback discussion.
