@@ -1,0 +1,155 @@
+Open in app
+Get started
+Cardstack
+
+
+Introducing Gitchain
+Cardstack’s Protocol for Syncing Application States
+Chris Tse
+Chris Tse
+May 13, 2019 · 18 min read
+
+
+
+
+Chris Tse, Founding Director of the Cardstack Project, introduces Gitchain. He explains how the popular code version management protocol called Git complements the blockchain perfectly, to support end-user-facing decentralized applications on the open Web.
+At Cardstack, we’ve been working on an essential piece of infrastructure: It’s called Gitchain. While this is a tricky piece of technology to explain, because it connects Git and blockchain — two things nobody really understands — it is an important piece of our vision of bringing the Web to the 3.0 era. It allows applications to be broken into small components called cards, which move fluidly between individual organizations, and enables people to live self-sovereign lives through the ownership of data.
+When it comes to blockchain-based applications, people always ask, “Does everything you do on a website or in a Web app belong to the blockchain? Do you write absolutely everything to the blockchain?” The answer is “no”. Writing information to the blockchain is time-consuming and expensive. Therefore, it is not an efficient way of storing a massive amount of data; especially as much data as it takes to run an application people will find comparable in quality and sophistication to what they’re used to with centralized websites. That is why we focus on using Git as a protocol.
+The primary, best-known technique for building end-usable, scalable applications using blockchain is called “Layer 2 architecture”, which means: You build a layer that does not write everything to a blockchain; and most of the interaction goes into this Layer 2.
+Gitchain is a chain-agnostic Layer 2 application state synchronization and syndication protocol based on Git. Basically, Gitchain is a Layer 2 application protocol; and some subset of the application state that is stored in this Layer 2 protocol gets anchored onto the blockchain. This allows us to achieve scalable applications that are end-user friendly, while still getting a lot of the nice characteristics that come with the use of blockchain.
+Our approach is about something familiar to people on the Web: content and data application. We have published a video about our vision regarding content creation and distribution. It shows how easy collaboration can be, as people author content they can then share with each other — a simple workflow coordinated through a protocol. This use case of content creation and distribution introduces the idea of Git combined with blockchain.
+
+Teaser video about content creation and distribution–done the Web 3.0 way: Cardstack enables makers, storytellers, developers, and designers to form decentralized networks and finally create on their own terms.
+Git is a version control software that was invented by Linus Torvald — the creator of Linux, which runs most of the world these days. Blockchain is a way to record global rights. And Git, the protocol itself, actually has a lot in common with the blockchain.
+Wikipedia says: “The Git history is stored in such a way that the ID of a particular version (a commit in Git terms) depends upon the complete development history leading up to that commit. Once it is published, it is not possible to change the old versions without it being noticed. The structure is similar to a Merkle tree, but with added data at the nodes and leaves.”
+If we change a couple of words, it sounds like a blockchain. Git is a cryptographical chain of hashes of history — similar to how the blockchain is a cryptographically authenticated history. They are so similar because the way to keep track of revisions is to make sure that the new version always refers to the old version.
+But when we say “Gitchain”, we don’t just mean using Git as a blockchain. We mean adding what’s good about Git and what makes it powerful — what makes Git the number-one way for developers to collaborate to create complicated software bundles and code in an open-source way, both within and outside enterprises on the open Web and blockchain. We’re imagining new ways of creating this global marketplace.
+In bringing Git and blockchain together, we want to achieve a powerful combination. Git has this unique quality: Whoever uses Git as a content management system realizes that it’s very easy to fork a repository. Take a version of a piece of software or an HTML file, fork it, and try something else. If you like it, you can commit it back as the official version by merging your changes back in. Forking blockchain is quite common (though not easy and not necessarily desirable). But we don’t merge in the blockchain. We just fork.
+
+Blockchain also creates this opportunity to arrive at a consensus of a global truth: Everybody agrees that this is the account balance of a certain address, or that something that has been put on the blockchain will be there forever (you can point to the time stamp for this particular element). Git doesn’t really do that. So, Git is actually a radically decentralized vision of a protocol.
+When Linus first came up with Git, there was no GitHub — no centralized authority for managing things. Therefore, the idea of Git is that there is no central authority. And on the blockchain, a global truth exists — so that one piece of content, once everybody agrees, is updated and synchronized accordingly. Combining the radical decentralization and flexibility of Git with the type of consensus we get from the blockchain is what we aim to do.
+Let’s use an example that has nothing to do with Git or blockchain. Think about word processing:
+
+When you write an article about the “Ultimate Snowboard Experience”, you use a word processor like Microsoft Word. Through that tool, you create something called content. That content is encoded in a word document (.docx). The distribution consists of adding that Word document to a shared folder like a Dropbox folder; when it is synced or uploaded, it is considered distributed. This could happen through a mailing list too. That’s the basic idea of content creation and distribution: You have a tool, which you use to create an artifact (some sort of bundle of text and images, etc.); then, you move that bundle to a place where it becomes accessible to everyone you want to share it with, or people get notified that they can download the document to their computers.
+To get closer to modern Web development, imagine this: Instead of using Microsoft Word, you use a Web page editor, where you can type, drag and drop, or use code to insert your text. But when you save a Web page, it’s not as atomic as a docx file. It is a folder with HTML, CSS, and Javascript. That folder represents these interlinked resources — rendering this special fare to visit Norway for $250, for example.
+
+When you’re done, you upload that folder to a Web server like visitnorway.deals, for which you pay a Web host USD $6 a month. There’s an FTP account, you just type in your username and password, and that’s how you distribute your work.
+However, this last step — the way to deliver the content for distribution — has changed. The Web page editor (which could be a Web app or a desktop app) still creates the same HTML-CSS-file; but instead of directly pushing it to the website by uploading it to an FTP server, you now check in your code (your HTML and CSS) to GitHub — a Git repository, a shared folder system that tracks version history. Once you have checked in your code, CI (Continuous Integration) automatically recognizes that someone has checked it in, that this is the official master version. It bundles everything together and deploys it to the cloud or to a server.
+
+GitHub not only monitors which files have been uploaded to the FTP server; it actually has a version management system. Anything you’re working on locally is managed by the version control system Git. So, every single time you add a file, you can keep track of which file you’re changing, which items you’re adding, which images you’re editing. And when you push it, Git keeps track of that set of commits as an atomic thing. Thus, Git acts like a chain, in that it remembers the entire history of your files in a cryptographical way. Everything has integrity when you push it to a service hosted by GitHub.com (which is a great website, where all developers put their code; it’s the social network for open- and even closed-source development). GitHub basically becomes a clearinghouse for the things that are created and distributed on people’s computers, with version-controlled folders managed by Git. Then, as a single source of truth, it helps you to deploy your content to a website.
+GitHub vs. Gitchain
+Structurally, GitHub sits at the center, and creators (makers or coders) are just updating the Git Repository. They either update it on their computers first and then push it, or they update it directly on GitHub.com. That information gets sucked into GitHub, and that’s where the workflow begins.
+
+GitHub is a very powerful network of people. They come to the centralized infrastructure of GitHub to do not only coding, but increasingly collaborating on content, data sets, specifications, documents, rules, regulations, and legal clauses. From a decentralization/blockchain-oriented perspective, this seems a bit uncomfortable. Does it make sense for everything to be routed through GitHub? The original version of Git, as Linus intended it, was very decentralized. So, the question we ask is: Could GitHub — this important position in the center — be replaced with something that is more like a protocol and less like a service?
+That’s where Gitchain comes in: It allows creators to connect with each other, using a combination of a Git protocol and a blockchain system, so that they don’t need a centralized entity to coordinate what they do.
+
+Let’s simplify this by looking at two different repositories. One is owned by one person; the other one could be a company, a partner, or another person.
+Almost anything that is a file can be managed in a Git Repository. This is content in HTML, data in CSV, content or data in some JSON format, as well as code, Javascript, markups, and configuration files. Those are all files that can be checked into a Git Repository the same way they can be copied into a folder; except that Git keeps track of every change to every file, building up a content-addressable system that allows you to go back to a previous version.
+
+Let’s say you want to make this set of things (your website, proposal, or other data set) available to another person. Right now, you have to upload it to GitHub. Instead, you could push it to Gitchain. The Gitchain will carry the whole bundle to the other side and allow another Git Repository, client, computer, or server to download all the information to recreate the content, data, and code. This is what we call synchronization — you’re basically making a copy of the whole thing. Gitchain has a hollow middle (meaning: no centralized entity!) and routes around the boundary through the concept of a distributed network.
+Moving parts of Gitchain: Distributed Storage & Distributed Ledger
+Two basic sets of infrastructure underline what we call Gitchain: Distributed Storage & Distributed Ledger. Essentially, it’s all about pushing and syncing between two repos.
+If you have a 400-megabyte file, you can’t put that on the blockchain; it’s too big. So, you put it (along with all the changes, metadata, captions, and descriptions) into something called a “packfile”: In a Git protocol, every single change is stored in the folder structure, which is very inefficient for a large amount. So, when you have to copy 4,000 files, you can create a packfile, which is like a zip file, except that it is compliant with Git. Once you have a packfile, you put it in Distributed Storage — which could be a shared drive on the cloud, a distributed file system like IPFS, or another type of blockchain-driven storage system.
+Now, you have to tell someone where this packfile is, and that’s where the reference comes in. You put a record on the Distributed Ledger, which is limited in size, saying, “Whoever finds this link in the Distributed Ledger can find the packfile; and with the packfile, they can recreate the original content, data, and/or code, or a mixture.” By pushing it, you create the reference on the ledger. When the other person sees the reference, they can look up the packfile, download it through a Distributed Storage mechanism, and unpack it; then, they can sync and recreate the Git Repository.
+
+The process of figuring out how to pack the packfile, decode it, and reconstruct its history is done by Git. This protocol just works. Developers rely on it to make sure every single line of code that exists in a repository shows up on the website precisely. So, instead of creating your own protocol to synchronize Distributed Ledger and Storage, why don’t you use the one that has been proven already? Let Git figure out how to unwrap packfiles for you.
+The key is that we only install tiny bits of data on-chain. More importantly, we store a consistent amount of data for each packfile, because we don’t need to store the number of files that are involved in it, the number of changes that have been made, or the number of people who made those changes. All that information is condensed in the packfile through the Git protocol. All you have to do is tell the other person where the packfile is, plus maybe some logic about who can access it. But the majority of the data is considered off-chain — meaning not on the Distributed Ledger.
+It can be in the Distributed Storage. This Distributed Storage can handle megabytes, gigabytes, and in some cases terabytes of data. If you chop up the packfile further, you can store any amount of data off-chain, and just use tiny bits of on-chain data as instructions for the Git repositories to recreate that content data and code.
+Technical layers
+Looking at this from a technical perspective, we have a Distributed Ledger or Blockchain layer and a Distributed Storage layer, both of which are Layer 1 protocols. They sit on the bottom, providing a flexible, content-addressable ledger service. Your Git Repository is an abstraction sitting on top of that, allowing you to open up the folder instead of inspecting the blockchain or looking into a packfile, so you can see things clear-text.
+Layer 2 is the Distributed Sync and Syndication system, using Git as an online protocol. When you write a bunch of files, you want to pack them together and connect the versions via hashes (as the Wikipedia article suggests). Then, you upload the packfile into Distributed Storage. Once you know where it’s going to be, you record the hash and the URL to that packfile on-chain, using a Distributed Ledger. That is how a consumer can find the packfile, download it, and unpack it. All you need are four actions: pack & upload the packfile, record it on-chain, decode it, then download & unpack it.
+On Layer 3, the Distributed User Hubs, users see what’s in the Git Repository. Most developers will just send you to their GitHub to check out what they do. The Git stuff, text files, and code make sense to them. But if you are not a developer, you have no idea what that means — though it could be something as simple as a list of websites or a list of articles or books. People don’t know how to look at markup, HTML, or JSON.
+
+Cardstack’s approach: Why don’t we represent these bits of information, which are in this Distributed Storage (Git), as cards? When you create the card (by filling out a form, writing an article, or creating some metadata about a video), we can take that data on the card and save it as a file in the Git Repository. And when you want to display this article, you can use the Git Repo. It’s just like translating the title and description stored in the repository into something much friendlier, turning the structured data into a small part of a Web page or a little widget. And the actual media files themselves, which are called a BLOB (Binary Large Object), could be checked into a Git repository or referenced as something else that is stored in a Distributed Storage, stitched together by the user’s hub. That is what Cardstack does.
+The idea is that these cards can represent data — content, podcasts, code, as well as logic, rules, or actions. At Cardstack, we have been working on building this Layer 3. But we always knew that we would have to go down to Layer 2. And that’s why we are using the infrastructure of Git as the underlying foundation.
+Enterprise network option
+You can use four technologies together to build something fairly sophisticated.
+For instance, we have helped a large label and a large publishing company manage the metadata for their songs, their recordings, their musical work, their artists, and even their audio files in a way that allows them to version and change the files; so that, if someone has made a mistake, they can create a new version. Putting that on a blockchain directly would be very impractical, as there are so many fields and values (putting 100 or 1,000 values on the Ethereum blockchain takes a few hours). So, it requires us to do this packing — this reduction of the number of records that need to be put on the blockchain. This way, if you want to upload a music or content catalog of 50,000 files, you only need to make one blockchain transaction and point it to the packfile that contains all those changes.
+We use Cardstack as the UI layer and the data orchestration layer. We use Git as the underlying way of versioning it. We use S3 to store the packfile (cloud storage). And we use Hyperledger Sawtooth as the blockchain to synchronize these references.
+
+Public network option
+If someone wants to use a specific infrastructure like this, which has been built for a certain enterprise, to create a dApp (decentralized app), they can! This combination of Cardstack, Git, storage, and ledger is scalable and flexible to support other chains. After all, the Cardstack Hub has a plugin mechanism. Instead of storing something in S3, you can store it in IPFS. Plus, we plan to move all the code we are using to keep track of things on the private blockchain to Ethereum. So, if you want to publish something to Ethereum and store it in IPFS, we can help you synchronize that.
+
+If you want to use other storage mechanisms, you could just change the adapter between Cardstack and those protocols to make it happen. Additionally, Ethereum is going to shift around; there will be different chains that you can leverage, depending on what kind of security and network or characteristics you want. You can choose a different ledger or blockchain as your bottom layer, as you build up your network.
+It is becoming increasingly common for people building on blockchains to pair IPFS and Ethereum. The big stuff, like the user stake, goes to IPFS, and Ethereum is where the official stuff happens. It always requires this correlation, which can get out of sync. But Gitchain is extremely precise; because Git, as a protocol, has this hash history. And if we peg that to the blockchain history, it will never be out of sync by even one byte. That type of precision reduces the number of errors you will get from the end users. Now, using Git as the way to combine IPFS and Ethereum is something we are pioneering; but it makes a lot of sense, because it allows developers (especially developers who understand Git) to rely on their knowledge as they think about how user data is captured, stored, isolated, and shared.
+Git provides a very good foundation — not only for data that’s stored entirely on Git and anchored on Ethereum, but also for private data that isn’t and shouldn’t be put on the chain at all. This type of isolation, using different repositories to reflect different organizational boundaries, is not really possible when you’re putting everything on IPFS or on Ethereum, both of which are public. Git provides this additional granularity of trust. And Cardstack will support a lot of these patterns of access control natively.
+Card Board application
+Card Board is an open-source Web publishing system — an application we have built to showcase what we call an “article card”. On GitHub, you see a version of it in a slightly refreshed design. This article card contains some text and images, and the whole bundle is stored in a folder managed by Git.
+For each article, the text is actually checked in; if you go to cardstack/cardboard-data on GitHub, you can see the article broken down into files. These are JSON-based files, so we can reconstruct the database by traversing the linkages between the articles, tags, and image references, to create something that basically forms an API. That’s how this article card can render all these things as a beautiful snowboard trip.
+We started building the app on GitHub, since GitHub is a good scaffolding for our Git implementation and our Cardstack implementation (which interprets the Git results, showing people when there is a Medium clone or when there is something better than Medium, because you can theme it and use different modules, for example). We built an application we could test, because we wanted something we could use to test Gitchain. Having used Gitchain in a private network for the music vertical, we are now importing it to support this open-source Web publishing system. Then, we can use that as a test to say “all this doesn’t have to go to cloud storage, but can go to IPFS and Ethereum”.
+
+The great thing is that the application on top doesn’t have to change at all. If you are a developer who likes Card Board, and you want to use it to build a podcast system or an interactive narrative experience, you can choose whether you care about decentralization or not. If you want to use the full Cardstack support for the GitHub plugin and the API, you can use that; you can just imagine that Gitchain doesn’t exist. But if you are into decentralization and you want to use the Git protocol, but in a decentralized way, you can just flip a switch and use Gitchain. Then, your article is syndicated all around the world without being in a central place. That also applies to data systems, CRM-type systems, and even messaging systems. It’s all about providing the ability for people to exchange data.
+To take it one step further: We were actually using a module within the node ecosystem called NodeGit, which uses the Git runtime as a piece of native software that’s wrapped in Node.js, so we can access it. But we found an amazing new implementation of Git, called isomorphic-git, which allows people to run a Git client in Node.js, in native Javascript. So, we implemented the entire protocol in Node. This way, we don’t have to deal with this native dependency of the C code and having to compile it. It’s just Node.js code, but it runs in the browser too. So, we are using the Git protocol as a way to pack and unpack. Your cards and the Cardstack runtime could run in a browser, but provide this additional service that goes beyond a Metamask or Web 3.0 plugin. Cardstack gives you indexing, plus the authority to do security control, and the ability to compose data and merge multiple data streams.
+
+Currently, Cardstack runs on a node, because it has to run on a server. But with isomorphic-git, which we’re switching all our Git work to, it will be able to run really well in a node ecosystem, while we are also able to add features. In fact, one of the APIs we added to the isomorphic-git through sponsorship (Open Collective) is a packfile support, so we can replace our zip file approach with a more compliant packfile. And that’s a great collaboration, when everything below us — including Cardstack and the apps we build on top — is open-source. We aim to bring isomorphic-git to more people through the Cardstack experience, to see Git go beyond this niche of being a programmer’s tool and become a fundamental protocol for sharing things on the Web.
+Chris Tse, Founding Director of the Cardstack Project, and Alex Speller, Senior Developer working on Gitchain, demonstrate how Card Board — a content-style application built on the Cardstack Framework — can synchronize its state, using Gitchain as a Layer-2 protocol on top of a distributed ledger.
+What’s Multi-Git?
+When you are writing and submitting something for publication, you are not going to sync the whole folder containing all your novels. That’s where Multi-Git comes in — a protocol sitting on top of the different Git repositories, making it possible to selectively share different portions of what you have worked on in Cardstack with other parties. We create new repositories that are shared between three or four people working together as a team, or inboxes where you can submit things that will be filtered within the organization, by moving around or promoting those cards or Git resources.
+This decentralized workflow has no intermediaries. You don’t just put everything into one Google website and have Google route things. Instead, these files are moved from one node to the other. Since all of them run Cardstack, they will understand the relationships, for example: “I’m sending you my article, but my original file is really big, so you can get a low-resolution version. But when you pay for my article and you want to publish it, you can get the high-resolution version from me.” These types of selective sharing and permissioning across multiparty workflows are what we call Multi-Git.
+But that’s another topic for another day.
+Learn More
+Cardstack’s Card Folio App: Community Demo
+The Tally Protocol: Scaling Ethereum With Untapped GPU Power
+How the Cardstack Framework Powers Decentralized Applications
+Cardstack.com
+Join our Discord channel and star Cardstack on GitHub to follow updates on the Cardstack framework, Gitchain, and a suite of standard cards.
+Blockchain
+Git
+Open Source
+Web3
+Tech
+200
+
+1
+
+
+
+
+Chris Tse
+WRITTEN BY
+
+Chris Tse
+Follow
+Technologist, designer, and founding director of the open-source @Cardstack Project. Building the experience layer of Web 3.0.
+
+Cardstack
+Cardstack
+
+Follow
+The world’s first cooperative SaaS platform. https://cardstack.com
+
+More From Medium
+(Partially) Explained Casper CBC specs – Part two: Protocols from the Abstract
+Barnabé Monnot
+
+A Plea to All Blockchain Companies: Please Don’t
+Samantha Stuber
+
+Damn You Metamask, Stop Popping Up Whenever I Blink
+Cheeky Timmy in The Startup
+
+Conceptual Models for DAO2DAO Relations
+BlockScience in BlockScience
+
+Blockchain: Impacts on Notarial Professions
+Aashish Sharma in HackerNoon.com
+
+Blockchain will Revolutionise Politics
+Jackson Rawlings 🤔 in The Politicalists
+
+Outlook on the Future of the Blockchain Industry
+Tony Simonovsky
+
+How Blockchain is Redefining Supply Chain Management
+inVerita
+
+About
+
+Help
+
+Legal
+
+Get the Medium app
+
+A button that says 'Download on the App Store', and if clicked it will lead you to the iOS App store
+A button that says 'Get it on, Google Play', and if clicked it will lead you to the Google Play store
